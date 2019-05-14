@@ -24,7 +24,7 @@ while( i<len(in) ):
         i+=1
     temp=sorted(temp,key=sortkey_string)
     for x in temp:
-        fin.append(x)
+        output.append(x)
     i+=1
 print(output)
-
+print("Successful")

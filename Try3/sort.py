@@ -12,18 +12,19 @@ def sortkey_string(x):
     return str(x)
 
 
-a = list(map(int, input().rstrip().split()))
-a = sorted(a,key=sortkey_sum_of_integers)
+in = list(map(int, input().rstrip().split()))
+in = sorted(in,key=sortkey_sum_of_integers)
 
-fin=[]
-i=0
-while( i<len(a) ):
-    tmp=[a[i]]
-    while(i<len(a)-1 and sum_of_integers(a[i])==sum_of_integers(a[i+1])):
-        tmp.append(a[i+1])
+output=[]
+in=0
+while( i<len(in) ):
+    temp=[in[i]]
+    while(i<len(in)-1 and sum_of_integers(in[i])==sum_of_integers(in[i+1])):
+        temp.append(in[i+1])
         i+=1
-    tmp=sorted(tmp,key=sortkey_string)
-    for x in tmp:
+    temp=sorted(temp,key=sortkey_string)
+    for x in temp:
         fin.append(x)
     i+=1
-print(fin)
+print(output)
+
